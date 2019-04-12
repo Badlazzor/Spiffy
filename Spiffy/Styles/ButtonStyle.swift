@@ -20,7 +20,14 @@ extension Styles {
         public struct Style: ButtonStyling {
             
             /// Possible properties of a Button.Style
+            ///
+            /// - title(color:for:)
+            /// - background(color:for:)
+            /// - background(image:for:)
             public enum Property {
+                case titleColor(with: UIColor, for: UIControl.State)
+                case backgroundColor(with: UIColor?, for: UIControl.State)
+                case backgroundImage(with: UIImage?, for: UIControl.State)
             }
             
             private let properties: [Property]
@@ -45,8 +52,29 @@ extension Styles {
             private func apply(to target: UIButton) {
                 properties.forEach { property in
                     switch property {
+                    case .titleColor(with: let color, for: let state):
+                        target.setTitleColor(color, for: state)
+                    case .backgroundColor(with: let color, for: let state):
+                        target.setBackgroundImage(Style.image(with: color), for: state)
+                    case .backgroundImage(with: let image, for: let state):
+                        target.setBackgroundImage(image, for: state)
                     }
                 }
+            }
+            
+            private static func image(with color: UIColor?) -> UIImage? {
+                guard let color = color else { return nil }
+                let rect = CGRect(x: 0.0, y: 0.0, width: 1.0, height: 1.0)
+                UIGraphicsBeginImageContext(rect.size)
+                let context = UIGraphicsGetCurrentContext()
+                
+                context?.setFillColor(color.cgColor)
+                context?.fill(rect)
+                
+                let image = UIGraphicsGetImageFromCurrentImageContext()
+                UIGraphicsEndImageContext()
+                
+                return image
             }
         }
     }
