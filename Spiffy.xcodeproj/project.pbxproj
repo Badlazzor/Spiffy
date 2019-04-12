@@ -21,6 +21,12 @@
 		6EFCA8ED22607FDB00786F21 /* LabelStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA8E922607FDB00786F21 /* LabelStyleTests.swift */; };
 		6EFCA8EE22607FDB00786F21 /* ImageViewStyleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA8EA22607FDB00786F21 /* ImageViewStyleTests.swift */; };
 		6EFCA8EF22607FDB00786F21 /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EFCA8EB22607FDB00786F21 /* TestAssets.xcassets */; };
+		6EFCA8F7226092B200786F21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA8F6226092B200786F21 /* AppDelegate.swift */; };
+		6EFCA8F9226092B200786F21 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA8F8226092B200786F21 /* ViewController.swift */; };
+		6EFCA8FC226092B200786F21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EFCA8FA226092B200786F21 /* Main.storyboard */; };
+		6EFCA8FE226092B300786F21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EFCA8FD226092B300786F21 /* Assets.xcassets */; };
+		6EFCA901226092B300786F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EFCA8FF226092B300786F21 /* LaunchScreen.storyboard */; };
+		6EFCA9062260A71B00786F21 /* Spiffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFCA8BD22607F5B00786F21 /* Spiffy.framework */; };
 		9F9A099934A9564264B9810E /* Pods_Spiffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92185F6C9FB51907637E2609 /* Pods_Spiffy.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +62,13 @@
 		6EFCA8E922607FDB00786F21 /* LabelStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelStyleTests.swift; sourceTree = "<group>"; };
 		6EFCA8EA22607FDB00786F21 /* ImageViewStyleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewStyleTests.swift; sourceTree = "<group>"; };
 		6EFCA8EB22607FDB00786F21 /* TestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TestAssets.xcassets; sourceTree = "<group>"; };
+		6EFCA8F4226092B200786F21 /* SpiffyShowcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiffyShowcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6EFCA8F6226092B200786F21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6EFCA8F8226092B200786F21 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6EFCA8FB226092B200786F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6EFCA8FD226092B300786F21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6EFCA900226092B300786F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6EFCA902226092B300786F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92185F6C9FB51907637E2609 /* Pods_Spiffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spiffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97BAC443FD2BB0511201F9D /* Pods-SpiffyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiffyTests.debug.xcconfig"; path = "Target Support Files/Pods-SpiffyTests/Pods-SpiffyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +88,14 @@
 			files = (
 				6EFCA8C722607F5B00786F21 /* Spiffy.framework in Frameworks */,
 				12084CFE9DC0639FC821EA9A /* Pods_SpiffyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EFCA8F1226092B200786F21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EFCA9062260A71B00786F21 /* Spiffy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +127,7 @@
 			children = (
 				6EFCA8BF22607F5B00786F21 /* Spiffy */,
 				6EFCA8CA22607F5B00786F21 /* SpiffyTests */,
+				6EFCA8F5226092B200786F21 /* SpiffyShowcase */,
 				6EFCA8BE22607F5B00786F21 /* Products */,
 				40F5D331353AB0EB1F1C79A0 /* Pods */,
 				42439C21D4DBD0F29027EC4F /* Frameworks */,
@@ -117,6 +139,7 @@
 			children = (
 				6EFCA8BD22607F5B00786F21 /* Spiffy.framework */,
 				6EFCA8C622607F5B00786F21 /* SpiffyTests.xctest */,
+				6EFCA8F4226092B200786F21 /* SpiffyShowcase.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,6 +179,19 @@
 				6EFCA8DE22607FC200786F21 /* ButtonStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		6EFCA8F5226092B200786F21 /* SpiffyShowcase */ = {
+			isa = PBXGroup;
+			children = (
+				6EFCA8F6226092B200786F21 /* AppDelegate.swift */,
+				6EFCA8F8226092B200786F21 /* ViewController.swift */,
+				6EFCA8FA226092B200786F21 /* Main.storyboard */,
+				6EFCA8FD226092B300786F21 /* Assets.xcassets */,
+				6EFCA8FF226092B300786F21 /* LaunchScreen.storyboard */,
+				6EFCA902226092B300786F21 /* Info.plist */,
+			);
+			path = SpiffyShowcase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +247,23 @@
 			productReference = 6EFCA8C622607F5B00786F21 /* SpiffyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6EFCA8F3226092B200786F21 /* SpiffyShowcase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EFCA905226092B300786F21 /* Build configuration list for PBXNativeTarget "SpiffyShowcase" */;
+			buildPhases = (
+				6EFCA8F0226092B200786F21 /* Sources */,
+				6EFCA8F1226092B200786F21 /* Frameworks */,
+				6EFCA8F2226092B200786F21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpiffyShowcase;
+			productName = SpiffyShowcase;
+			productReference = 6EFCA8F4226092B200786F21 /* SpiffyShowcase.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -229,6 +282,9 @@
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
 					};
+					6EFCA8F3226092B200786F21 = {
+						CreatedOnToolsVersion = 10.1;
+					};
 				};
 			};
 			buildConfigurationList = 6EFCA8B722607F5B00786F21 /* Build configuration list for PBXProject "Spiffy" */;
@@ -237,6 +293,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 6EFCA8B322607F5B00786F21;
 			productRefGroup = 6EFCA8BE22607F5B00786F21 /* Products */;
@@ -245,6 +302,7 @@
 			targets = (
 				6EFCA8BC22607F5B00786F21 /* Spiffy */,
 				6EFCA8C522607F5B00786F21 /* SpiffyTests */,
+				6EFCA8F3226092B200786F21 /* SpiffyShowcase */,
 			);
 		};
 /* End PBXProject section */
@@ -262,6 +320,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFCA8EF22607FDB00786F21 /* TestAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EFCA8F2226092B200786F21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EFCA901226092B300786F21 /* LaunchScreen.storyboard in Resources */,
+				6EFCA8FE226092B300786F21 /* Assets.xcassets in Resources */,
+				6EFCA8FC226092B200786F21 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +431,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6EFCA8F0226092B200786F21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EFCA8F9226092B200786F21 /* ViewController.swift in Sources */,
+				6EFCA8F7226092B200786F21 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -372,6 +449,25 @@
 			targetProxy = 6EFCA8C822607F5B00786F21 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6EFCA8FA226092B200786F21 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EFCA8FB226092B200786F21 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6EFCA8FF226092B300786F21 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6EFCA900226092B300786F21 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6EFCA8CF22607F5B00786F21 /* Debug */ = {
@@ -592,6 +688,40 @@
 			};
 			name = Release;
 		};
+		6EFCA903226092B300786F21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpiffyShowcase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hu.badlazzor.SpiffyShowcase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6EFCA904226092B300786F21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = SpiffyShowcase/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = hu.badlazzor.SpiffyShowcase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -618,6 +748,15 @@
 			buildConfigurations = (
 				6EFCA8D522607F5B00786F21 /* Debug */,
 				6EFCA8D622607F5B00786F21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EFCA905226092B300786F21 /* Build configuration list for PBXNativeTarget "SpiffyShowcase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6EFCA903226092B300786F21 /* Debug */,
+				6EFCA904226092B300786F21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
