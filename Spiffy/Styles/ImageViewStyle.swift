@@ -1,6 +1,6 @@
 //
 //  ImageViewStyle.swift
-//  Styling
+//  Spiffy
 //
 //  Created by Hajagos Balázs on 2019. 02. 12..
 //

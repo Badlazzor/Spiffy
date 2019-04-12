@@ -1,6 +1,6 @@
 //
 //  ViewStyleTests.swift
-//  StylingTests
+//  SpiffyTests
 //
 //  Created by Balazs Hajagos on 2019. 04. 11..
 //  Copyright © 2019. Balazs Hajagos. All rights reserved.
