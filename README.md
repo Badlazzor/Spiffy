@@ -1,10 +1,4 @@
-#Spiffy
-
-<!--[![Build Status](https://travis-ci.org/Quick/Quick.svg?branch=master)](https://travis-ci.org/Quick/Quick)
-[![CocoaPods](https://img.shields.io/cocoapods/v/Quick.svg)](https://cocoapods.org/pods/Quick)
-[![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platforms](https://img.shields.io/cocoapods/p/Quick.svg)](https://cocoapods.org/pods/Quick)
-[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)-->
+# Spiffy
 
 Spiffy is a lightweight styling library for iOS apps written in Swift. It's main goal is to help define easy-to-apply styles, and NOT to create an all-knowing super wrapper.
 
@@ -50,12 +44,12 @@ extension Styles {
 }
 ```
 
-##Requirements
+## Requirements
 
 - XCode 9.0
 - Swift 4.0
 
-##Installation
+## Installation
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
