@@ -46,8 +46,8 @@ extension Styles {
 
 ## Requirements
 
-- XCode 9.0
-- Swift 4.0
+- XCode 10.0
+- Swift 4.2
 
 ## Installation
 
