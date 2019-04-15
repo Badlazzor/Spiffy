@@ -47,7 +47,7 @@ extension Styles {
                 case let target as UILabel:
                     apply(to: target)
                 default:
-                    print("Could not apply \(self) to \(target.self)")
+                    print(StylingError.couldNotApply(to: "\(target)").localizedDescription)
                 }
             }
             

@@ -45,7 +45,7 @@ extension Styles {
                 case let target as UIButton:
                     apply(to: target)
                 default:
-                    print("Could not apply \(self) to \(target)")
+                    print(StylingError.couldNotApply(to: "\(target)").localizedDescription)
                 }
             }
             
