@@ -26,7 +26,7 @@ final class LabelStyleTests: QuickSpec {
                 
                 context("that modifies the text alignment") {
                     beforeEach {
-                        style = Styles.Label.Style(.alignment(.center))
+                        style = Styles.Label(.alignment(.center))
                     }
                     
                     it("changes alignment according to the style") {
@@ -38,7 +38,7 @@ final class LabelStyleTests: QuickSpec {
                 
                 context("that modifies the text font") {
                     beforeEach {
-                        style = Styles.Label.Style(.font(UIFont.systemFont(ofSize: 20)))
+                        style = Styles.Label(.font(UIFont.systemFont(ofSize: 20)))
                     }
                     
                     it("changes alignment according to the style") {
@@ -50,7 +50,7 @@ final class LabelStyleTests: QuickSpec {
                 
                 context("that modifies the label's numberOfLines") {
                     beforeEach {
-                        style = Styles.Label.Style(.lines(0))
+                        style = Styles.Label(.lines(0))
                     }
                     
                     it("changes alignment according to the style") {
@@ -62,7 +62,7 @@ final class LabelStyleTests: QuickSpec {
                 
                 context("that modifies the text color") {
                     beforeEach {
-                        style = Styles.Label.Style(.color(.red))
+                        style = Styles.Label(.color(.red))
                     }
                     
                     it("changes alignment according to the style") {
@@ -75,12 +75,12 @@ final class LabelStyleTests: QuickSpec {
             
             describe("styled by a collection of stlyes") {
                 let styles: [Styling] = [
-                    Styles.Label.Style(.color(.red)),
-                    Styles.Label.Style(
+                    Styles.Label(.color(.red)),
+                    Styles.Label(
                         .color(.yellow),
                         .alignment(.center)
                     ),
-                    Styles.Label.Style(
+                    Styles.Label(
                         .alignment(.right),
                         .lines(2)
                     ),

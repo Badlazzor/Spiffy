@@ -26,7 +26,7 @@ final class ViewStyleTests: QuickSpec {
                 
                 context("that modifies it's alpha") {
                     beforeEach {
-                        style = Styles.View.Style(.alpha(0.2))
+                        style = Styles.View(.alpha(0.2))
                     }
                     
                     it("changes the alpha according to the style") {
@@ -38,7 +38,7 @@ final class ViewStyleTests: QuickSpec {
                 
                 context("that modifies it's autolayouted behviour") {
                     beforeEach {
-                        style = Styles.View.Style(.autolayouted(true))
+                        style = Styles.View(.autolayouted(true))
                     }
                     
                     it("changes translatesAutoresizingMaskIntoConstraints according to the style") {
@@ -50,7 +50,7 @@ final class ViewStyleTests: QuickSpec {
                 
                 context("that modifies it's backgroundColor") {
                     beforeEach {
-                        style = Styles.View.Style(.backgroundColor(.red))
+                        style = Styles.View(.backgroundColor(.red))
                     }
                     
                     it("changes backgroundColor according to the style") {
@@ -62,7 +62,7 @@ final class ViewStyleTests: QuickSpec {
                 
                 context("that modifies it's contentMode") {
                     beforeEach {
-                        style = Styles.View.Style(.contentMode(.scaleAspectFit))
+                        style = Styles.View(.contentMode(.scaleAspectFit))
                     }
 
                     it("changes contentMode according to the style") {
@@ -74,7 +74,7 @@ final class ViewStyleTests: QuickSpec {
                 
                 context("that modifies it's layout priorities") {
                     beforeEach {
-                        style = Styles.View.Style(.priority(.compressionResistance, .horizontal, 800))
+                        style = Styles.View(.priority(.compressionResistance, .horizontal, 800))
                     }
                     
                     it("changes layout priorities according to the style") {
@@ -87,12 +87,12 @@ final class ViewStyleTests: QuickSpec {
             
             describe("styled by a collection of stlyes") {
                 let styles: [Styling] = [
-                    Styles.View.Style(.backgroundColor(.red)),
-                    Styles.View.Style(
+                    Styles.View(.backgroundColor(.red)),
+                    Styles.View(
                         .backgroundColor(.yellow),
                         .contentMode(.scaleAspectFill)
                     ),
-                    Styles.View.Style(
+                    Styles.View(
                         .contentMode(.scaleAspectFit),
                         .alpha(0.5)
                     ),

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name          = 'Spiffy'
-  s.version       = '0.0.1'
+  s.version       = '0.0.2'
   s.license       = { :type => "MIT", :file => "LICENSE.md" }
   s.homepage      = 'https://github.com/Badlazzor/Spiffy'
   s.authors       = { 'Balázs Hajagos' => 'badlazzor@gmail.com' }

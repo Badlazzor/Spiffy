@@ -1,5 +1,9 @@
 # Spiffy
 
+[![Build Status](https://api.travis-ci.org/Badlazzor/Spiffy.svg?branch=master)](https://travis-ci.org/Badlazzor/Spiffy)
+[![CocoaPods](https://img.shields.io/cocoapods/v/Spiffy.svg)](https://cocoapods.org/pods/Spiffy)
+[![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
+
 Spiffy is a lightweight styling library for iOS apps written in Swift. It's main goal is to help define easy-to-apply styles, and NOT to create an all-knowing super wrapper.
 
 ```swift
