@@ -28,7 +28,10 @@
 		6EFCA901226092B300786F21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6EFCA8FF226092B300786F21 /* LaunchScreen.storyboard */; };
 		6EFCA9062260A71B00786F21 /* Spiffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFCA8BD22607F5B00786F21 /* Spiffy.framework */; };
 		6EFCA90A226478C400786F21 /* ViewRoundingDynamicSizeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA909226478C400786F21 /* ViewRoundingDynamicSizeProvider.swift */; };
-		6EFCA90C22647A6700786F21 /* StylingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA90B22647A6700786F21 /* StylingError.swift */; };
+		6EFCA90C22647A6700786F21 /* SpiffyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA90B22647A6700786F21 /* SpiffyError.swift */; };
+		6EFCA90E2264CB8800786F21 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA90D2264CB8800786F21 /* Theming.swift */; };
+		6EFCA9102264CE0B00786F21 /* Themeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA90F2264CE0B00786F21 /* Themeable.swift */; };
+		6EFCA9122265D3F200786F21 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA9112265D3F200786F21 /* Themes.swift */; };
 		9F9A099934A9564264B9810E /* Pods_Spiffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92185F6C9FB51907637E2609 /* Pods_Spiffy.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +75,10 @@
 		6EFCA900226092B300786F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6EFCA902226092B300786F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6EFCA909226478C400786F21 /* ViewRoundingDynamicSizeProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRoundingDynamicSizeProvider.swift; sourceTree = "<group>"; };
-		6EFCA90B22647A6700786F21 /* StylingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StylingError.swift; sourceTree = "<group>"; };
+		6EFCA90B22647A6700786F21 /* SpiffyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiffyError.swift; sourceTree = "<group>"; };
+		6EFCA90D2264CB8800786F21 /* Theming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
+		6EFCA90F2264CE0B00786F21 /* Themeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themeable.swift; sourceTree = "<group>"; };
+		6EFCA9112265D3F200786F21 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
 		92185F6C9FB51907637E2609 /* Pods_Spiffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spiffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D97BAC443FD2BB0511201F9D /* Pods-SpiffyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiffyTests.debug.xcconfig"; path = "Target Support Files/Pods-SpiffyTests/Pods-SpiffyTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,7 +161,10 @@
 				6EFCA8D722607FC200786F21 /* Styleable.swift */,
 				6EFCA8D822607FC200786F21 /* Styles.swift */,
 				6EFCA8D922607FC200786F21 /* Styling.swift */,
-				6EFCA90B22647A6700786F21 /* StylingError.swift */,
+				6EFCA90B22647A6700786F21 /* SpiffyError.swift */,
+				6EFCA90F2264CE0B00786F21 /* Themeable.swift */,
+				6EFCA9112265D3F200786F21 /* Themes.swift */,
+				6EFCA90D2264CB8800786F21 /* Theming.swift */,
 				6EFCA8C022607F5B00786F21 /* Spiffy.h */,
 				6EFCA8C122607F5B00786F21 /* Info.plist */,
 			);
@@ -426,11 +435,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFCA8E422607FC200786F21 /* ViewStyle.swift in Sources */,
+				6EFCA9122265D3F200786F21 /* Themes.swift in Sources */,
 				6EFCA8E122607FC200786F21 /* Styling.swift in Sources */,
+				6EFCA90E2264CB8800786F21 /* Theming.swift in Sources */,
 				6EFCA8DF22607FC200786F21 /* Styleable.swift in Sources */,
 				6EFCA8E322607FC200786F21 /* LabelStyle.swift in Sources */,
 				6EFCA90A226478C400786F21 /* ViewRoundingDynamicSizeProvider.swift in Sources */,
-				6EFCA90C22647A6700786F21 /* StylingError.swift in Sources */,
+				6EFCA9102264CE0B00786F21 /* Themeable.swift in Sources */,
+				6EFCA90C22647A6700786F21 /* SpiffyError.swift in Sources */,
 				6EFCA8E222607FC200786F21 /* ImageViewStyle.swift in Sources */,
 				6EFCA8E022607FC200786F21 /* Styles.swift in Sources */,
 				6EFCA8E522607FC200786F21 /* ButtonStyle.swift in Sources */,

@@ -13,44 +13,40 @@ public protocol ImageViewStyling: Styling {}
 // MARK: - ImageView Styles
 extension Styles {
     
-    /// ImageView related styling
-    public enum ImageView {
+    /// Base ImageView style
+    public struct ImageView: ImageViewStyling {
         
-        /// Style targeted on UIImageView
-        public struct Style: ImageViewStyling {
-            
-            /// Possible properties of a ImageView.Style
-            ///
-            /// - image
-            public enum Property {
-                case image(UIImage)
+        /// Possible properties of a ImageView.Style
+        ///
+        /// - image
+        public enum Property {
+            case image(UIImage)
+        }
+        
+        private let properties: [Property]
+        
+        public init(_ propertyList: Property...) {
+            self.properties = propertyList
+        }
+        
+        public init(_ properties: [Property]) {
+            self.properties = properties
+        }
+        
+        public func apply<T>(to target: T) {
+            switch target {
+            case let target as UIImageView:
+                apply(to: target)
+            default:
+                print(SpiffyError.couldNotApply(style: "\(self)", to: "\(target)").description)
             }
-            
-            private let properties: [Property]
-            
-            public init(_ propertyList: Property...) {
-                self.properties = propertyList
-            }
-            
-            public init(_ properties: [Property]) {
-                self.properties = properties
-            }
-            
-            public func apply<T>(to target: T) {
-                switch target {
-                case let target as UIImageView:
-                    apply(to: target)
-                default:
-                    print(StylingError.couldNotApply(to: "\(target)").localizedDescription)
-                }
-            }
-            
-            private func apply(to target: UIImageView) {
-                properties.forEach { property in
-                    switch property {
-                    case let .image(image):
-                        target.image = image
-                    }
+        }
+        
+        private func apply(to target: UIImageView) {
+            properties.forEach { property in
+                switch property {
+                case let .image(image):
+                    target.image = image
                 }
             }
         }

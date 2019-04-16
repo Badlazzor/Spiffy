@@ -16,3 +16,8 @@ public protocol Styling {
     func apply<T>(to target: T)
 }
 
+extension Array: Styling where Element == Styling {
+    public func apply<T>(to target: T) {
+        self.forEach { $0.apply(to: target) }
+    }
+}

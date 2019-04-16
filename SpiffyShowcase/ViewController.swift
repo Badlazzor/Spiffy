@@ -10,129 +10,196 @@ import Spiffy
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var cardShadowView: UIView!
+    @IBOutlet weak var cardImage: UIImageView!
+    @IBOutlet weak var cardLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
     
-    var sizeChangeHandlers: [() -> Void] = []
-    
-    static let exampleLongString = "Multilined. Nulla venenatis lacus ipsum, at luctus libero faucibus in. In efficitur egestas nisl, non finibus metus congue tempor. Nunc sodales ipsum vel lacus ultrices bibendum eu ac leo. Nam at pharetra mi. Nullam iaculis mollis suscipit. Morbi sodales diam blandit, pretium quam vitae, maximus enim. Pellentesque porta lectus sed felis dignissim malesuada. Quisque sed mauris sed nisl rutrum imperdiet. Nam vel nisl semper, vehicula libero."
+    private let exampleLongString = "Nulla venenatis lacus ipsum, at luctus libero faucibus in. In efficitur egestas nisl, non finibus metus congue tempor. Nunc sodales ipsum vel lacus ultrices bibendum eu ac leo. Nam at pharetra mi. Nullam iaculis mollis suscipit. Morbi sodales diam blandit, pretium quam vitae, maximus enim. Pellentesque porta lectus sed felis dignissim malesuada. Quisque sed mauris sed nisl rutrum imperdiet. Nam vel nisl semper, vehicula libero."
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stackView.styled(by: Styles.Showcase.StackView.base)
+        fillData()
+        apply(theme: Themes.Showcase.appleish)
         
-        // MARK: Add labels
-        stackView.addArrangedSubview(createLabel(with: "Aligned").styled(by: Styles.Showcase.Label.alignment))
-        stackView.addArrangedSubview(createLabel(with: "Colored").styled(by: Styles.Showcase.Label.color))
-        stackView.addArrangedSubview(createLabel(with: "Custom font").styled(by: Styles.Showcase.Label.font))
-        stackView.addArrangedSubview(createLabel(with: ViewController.exampleLongString).styled(by: Styles.Showcase.Label.lines))
-        stackView.addArrangedSubview(createLabel(with: "Multiple propery change").styled(by: Styles.Showcase.Label.multi))
-        stackView.addArrangedSubview(createLabel(with: "Combined styles").styled(by: Styles.Showcase.Label.combined))
+        segmentedControl.addTarget(self, action: #selector(ViewController.themeSelected(_:)), for: .valueChanged)
+    }
+    
+    @objc
+    private func themeSelected(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 1:
+            apply(theme: Themes.Showcase.flat, animated: true)
+        default:
+            apply(theme: Themes.Showcase.appleish, animated: true)
+        }
+    }
+    
+    private func fillData() {
+        titleLabel.text = "Title"
+        cardLabel.text = exampleLongString
+        noteLabel.text = exampleLongString
+        button1.setTitle("Decline", for: .normal)
+        button2.setTitle("Accept", for: .normal)
+    }
+    
+    private func apply<T: Theming>(theme: T, animated: Bool) where T.Key == Themes.Showcase.Key {
+        guard animated else {
+            apply(theme: theme)
+            return
+        }
         
-        // MARK: Add buttons
-        stackView.addArrangedSubview(
-            createButtonShadow(with:
-                createButton(with: "Colored")
-                    .styled(by: Styles.Showcase.Button.titleColorForNormal)
-        ))
-        stackView.addArrangedSubview(
-            createButtonShadow(with:
-                createButton(with: "Highlight Colored")
-                    .styled(by: Styles.View.RoundingStyle(.dynamic(type: .full, axis: .horizontal, with: self)))
-                    .styled(by: Styles.Showcase.Button.titleColorForPressed)
-        ))
+        UIView.animate(withDuration: 0.2) { [weak self] in
+            self?.apply(theme: theme)
+        }
     }
     
-    private func createLabel(with text: String) -> UILabel {
-        let label = UILabel()
-        label.text = text
-        return label
-    }
-    
-    private func createButton(with text: String) -> UIButton {
-        let button = UIButton(type: .custom)
-        button.setTitle(text, for: .normal)
-        button.adjustsImageWhenHighlighted = false
-        NSLayoutConstraint.activate([
-            button.heightAnchor.constraint(equalToConstant: 44)
-        ])
-        return button
-    }
-    
-    private func createButtonShadow(with button: UIButton) -> UIView {
-        let view = UIView().styled(by: Styles.Showcase.Button.buttonShadow)
-        view.addSubview(button)
-        NSLayoutConstraint.activate([
-            button.topAnchor.constraint(equalTo: view.topAnchor),
-            button.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            button.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            button.leadingAnchor.constraint(equalTo: view.leadingAnchor)
-        ])
-        return view
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        sizeChangeHandlers.forEach { $0() }
+    private func apply<T: Theming>(theme: T) where T.Key == Themes.Showcase.Key {
+        titleLabel.themed(as: .title, from: theme)
+        cardView.themed(as: .card, from: theme)
+        cardShadowView.themed(as: .cardShadow, from: theme)
+        cardImage.themed(as: .icon, from: theme)
+        cardLabel.themed(as: .body, from: theme)
+        noteLabel.themed(as: .footnote, from: theme)
+        button1.themed(as: .buttonDecline, from: theme)
+        button2.themed(as: .buttonAccept, from: theme)
     }
 }
 
-extension ViewController: ViewRoundingDynamicSizeProvider {
-    func registerDynamicSizeChangeAction(for view: UIView, action: @escaping (CGSize) -> Void) {
-        sizeChangeHandlers.append({ [weak view] in
-            guard let size = view?.bounds.size else { return }
-            action(size)
-        })
-    }
-}
-
-extension Styles {
-    fileprivate enum Showcase {
-        enum StackView {
-            static let base = Styles.View.Style(.backgroundColor(.clear))
+fileprivate extension Themes {
+    enum Showcase {
+        enum Key {
+            case title
+            case body
+            case footnote
+            
+            case card
+            case cardShadow
+            case icon
+            
+            case buttonAccept
+            case buttonDecline
         }
         
-        enum Label {
-            static let alignment = Styles.Label.Style(.alignment(.center))
-            static let color = Styles.Label.Style(.color(.red))
-            static let font = Styles.Label.Style(.font(UIFont.boldSystemFont(ofSize: 22)))
-            static let lines = Styles.Label.Style(.lines(0))
+        static let appleish = Theme<Key>(styleMap: [
+            .title: Styles.Label(
+                .alignment(.left),
+                .font(.preferredFont(forTextStyle: .title1)),
+                .color(.black)
+            ),
             
-            static let multi = Styles.Label.Style(
-                .alignment(.right),
-                .color(.blue)
-            )
+            .body: Styles.Label(
+                .font(.preferredFont(forTextStyle: .body)),
+                .color(.black)
+            ),
             
-            static let combined: [Styling] = [
-                alignment,
-                color,
-                Styles.Label.Style(.font(UIFont.systemFont(ofSize: 40, weight: .light)))
-            ]
-        }
-        
-        enum Button {
-            static let titleColorForNormal: [Styling] = [
-                Styles.View.Predefined.autolayouted,
-                Styles.Button.Style(
-                    .titleColor(with: .red, for: .normal),
-                    .backgroundColor(with: .gray, for: .normal)
-                ),
-                Styles.View.RoundingStyle(.explicit(4.0))
-            ]
-            static let titleColorForPressed: [Styling] = [
-                Styles.View.Predefined.autolayouted,
-                Styles.Button.Style(
-                    .titleColor(with: .black, for: .normal),
-                    .backgroundColor(with: .white, for: .normal),
-                    .titleColor(with: .red, for: .highlighted),
-                    .backgroundColor(with: .gray, for: .highlighted)
-                )
-            ]
-            static let buttonShadow =  Styles.View.Style(
-                .autolayouted(true),
+            .footnote: Styles.Label(
+                .font(.preferredFont(forTextStyle: .footnote)),
+                .color(.lightGray)
+            ),
+            
+            .card: Styles.View(
+                .backgroundColor(.white),
+                .rounding(.explicit(20.0))
+            ),
+            
+            .cardShadow: Styles.View(
                 .backgroundColor(.clear),
-                .shadow(opacity: 0.2, radius: 8.0, offset: CGSize(width: 0, height: 2), color: .black)
-            )
-        }
+                .shadow(opacity: 0.7, radius: 12.0, offset: CGSize(width: 0.0, height: 0.0), color: .gray)
+            ),
+            
+            .icon: [
+                Styles.ImageView(.image(#imageLiteral(resourceName: "apple"))),
+                Styles.View(.contentMode(.scaleAspectFit))
+            ],
+            
+            .buttonAccept: [
+                Styles.Button(
+                    .titleColor(with: .white, for: .normal),
+                    .backgroundColor(with: .blue, for: .normal)
+                ),
+                Styles.View(
+                    .rounding(.explicit(22.0))
+                )
+            ],
+            
+            .buttonDecline: [
+                Styles.Button(
+                    .titleColor(with: .white, for: .normal),
+                    .backgroundColor(with: .red, for: .normal)
+                ),
+                Styles.View(
+                    .rounding(.explicit(22.0))
+                )
+            ],
+        ])
+        
+        static let flat = Theme<Key>(styleMap: [
+            .title: Styles.Label(
+                .alignment(.center),
+                .font(.systemFont(ofSize: 34.0, weight: .light)),
+                .color(.rgba(48, 51, 107, 1.0))
+            ),
+            
+            .body: Styles.Label(
+                .font(.systemFont(ofSize: 16.0, weight: .light)),
+                .color(.rgba(48, 51, 107, 1.0))
+            ),
+            
+            .footnote: Styles.Label(
+                .font(.systemFont(ofSize: 14.0, weight: .light)),
+                .color(.rgba(149, 175, 192, 1.0))
+            ),
+            
+            .card: Styles.View(
+                .backgroundColor(.rgba(223, 249, 251, 1.0)),
+                .rounding(.explicit(8.0))
+            ),
+            
+            .cardShadow: Styles.View(
+                .backgroundColor(.clear),
+                .shadow(opacity: 0.0, radius: 0.0, offset: CGSize(width: 0.0, height: 0.0), color: nil)
+            ),
+            
+            .icon: [
+                Styles.ImageView(.image(#imageLiteral(resourceName: "apple_flat"))),
+                Styles.View(.contentMode(.scaleAspectFit))
+            ],
+            
+            .buttonAccept: [
+                Styles.Button(
+                    .titleColor(with: .white, for: .normal),
+                    .backgroundColor(with: .rgba(104, 109, 224, 1.0), for: .normal),
+                    .backgroundColor(with: .rgba(72, 52, 212, 1.0), for: .highlighted)
+                ),
+                Styles.View(
+                    .rounding(.explicit(8.0))
+                )
+            ],
+            
+            .buttonDecline: [
+                Styles.Button(
+                    .titleColor(with: .white, for: .normal),
+                    .backgroundColor(with: .rgba(255, 121, 121, 1.0), for: .normal),
+                        .backgroundColor(with: .rgba(235, 77, 75, 1.0), for: .highlighted)
+                ),
+                Styles.View(
+                    .rounding(.explicit(8.0))
+                )
+            ],
+        ])
+    }
+}
+
+extension UIColor {
+    static func rgba(_ r: Int, _ g: Int, _ b: Int, _ a: Float) -> UIColor {
+        return UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: CGFloat(a))
     }
 }
