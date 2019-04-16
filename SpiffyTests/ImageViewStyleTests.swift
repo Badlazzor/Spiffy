@@ -30,7 +30,7 @@ final class ImageViewStyleTests: QuickSpec {
                             XCTAssert(false, "test image not found")
                             return
                         }
-                        style = Styles.ImageView.Style(.image(image))
+                        style = Styles.ImageView(.image(image))
                         target.image = nil
                         target.styled(by: style)
                         expect(target.image).to(equal(image))
