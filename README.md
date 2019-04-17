@@ -65,23 +65,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        apply(theme: Themes.Showcase.myAwsomeTheme)
+        apply(theme: Themes.MyTheme.myAwsomeTheme)
     }
 
-    private func apply<T: Theming>(theme: T) where T.Key == Themes.Showcase.Key {
+    private func apply<T: Theming>(theme: T) where T.Key == Themes.MyTheme.Key {
         button.themed(as: .redButton, from: theme)
         label.themed(as: .blueLabel, from: theme)
     }
 }
 
 fileprivate extension Themes {
-    enum Showcase {
+    enum MyTheme {
         enum Key {
             case redButton
             case blueLabel
         }
         
-        static let appleish = Theme<Key>(styleMap: [
+        static let myAwsomeTheme = Theme<Key>(styleMap: [
             .redButton: Styles.Button(
                 .titleColor(with: .white, for: .normal),
                 .backgroundColor(with: .red, for: .normal)
