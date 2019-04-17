@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12084CFE9DC0639FC821EA9A /* Pods_SpiffyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382A6C3C3904D2BEF96F5EA9 /* Pods_SpiffyTests.framework */; };
+		5928EE96F73D597E033F5142 /* Pods_SpiffyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 834C4D147CB828BFEF547152 /* Pods_SpiffyTests.framework */; };
 		6EFCA8C722607F5B00786F21 /* Spiffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EFCA8BD22607F5B00786F21 /* Spiffy.framework */; };
 		6EFCA8CE22607F5B00786F21 /* Spiffy.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EFCA8C022607F5B00786F21 /* Spiffy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6EFCA8DF22607FC200786F21 /* Styleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA8D722607FC200786F21 /* Styleable.swift */; };
@@ -32,7 +32,7 @@
 		6EFCA90E2264CB8800786F21 /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA90D2264CB8800786F21 /* Theming.swift */; };
 		6EFCA9102264CE0B00786F21 /* Themeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA90F2264CE0B00786F21 /* Themeable.swift */; };
 		6EFCA9122265D3F200786F21 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EFCA9112265D3F200786F21 /* Themes.swift */; };
-		9F9A099934A9564264B9810E /* Pods_Spiffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92185F6C9FB51907637E2609 /* Pods_Spiffy.framework */; };
+		914D446A7622C8C8BCB8702D /* Pods_Spiffy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF2515B130C84DA2A6F06E4 /* Pods_Spiffy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,10 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0964BA3877328E1EE8C37461 /* Pods-Spiffy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spiffy.debug.xcconfig"; path = "Target Support Files/Pods-Spiffy/Pods-Spiffy.debug.xcconfig"; sourceTree = "<group>"; };
-		237486F1B42B429DF6984DCE /* Pods-Spiffy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spiffy.release.xcconfig"; path = "Target Support Files/Pods-Spiffy/Pods-Spiffy.release.xcconfig"; sourceTree = "<group>"; };
-		382A6C3C3904D2BEF96F5EA9 /* Pods_SpiffyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiffyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5C44C5813439732802AE5A18 /* Pods-SpiffyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiffyTests.release.xcconfig"; path = "Target Support Files/Pods-SpiffyTests/Pods-SpiffyTests.release.xcconfig"; sourceTree = "<group>"; };
+		04AC89845CCD865EE26A6121 /* Pods-Spiffy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spiffy.debug.xcconfig"; path = "Target Support Files/Pods-Spiffy/Pods-Spiffy.debug.xcconfig"; sourceTree = "<group>"; };
+		15622D600C5DAD99E627CD2C /* Pods-Spiffy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spiffy.release.xcconfig"; path = "Target Support Files/Pods-Spiffy/Pods-Spiffy.release.xcconfig"; sourceTree = "<group>"; };
 		6EFCA8BD22607F5B00786F21 /* Spiffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Spiffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EFCA8C022607F5B00786F21 /* Spiffy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spiffy.h; sourceTree = "<group>"; };
 		6EFCA8C122607F5B00786F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -79,8 +77,10 @@
 		6EFCA90D2264CB8800786F21 /* Theming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
 		6EFCA90F2264CE0B00786F21 /* Themeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themeable.swift; sourceTree = "<group>"; };
 		6EFCA9112265D3F200786F21 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
-		92185F6C9FB51907637E2609 /* Pods_Spiffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spiffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D97BAC443FD2BB0511201F9D /* Pods-SpiffyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiffyTests.debug.xcconfig"; path = "Target Support Files/Pods-SpiffyTests/Pods-SpiffyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		834C4D147CB828BFEF547152 /* Pods_SpiffyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpiffyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE493983639509D3B3A9CB70 /* Pods-SpiffyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiffyTests.debug.xcconfig"; path = "Target Support Files/Pods-SpiffyTests/Pods-SpiffyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E52F7889A1CB1854AEEF38CB /* Pods-SpiffyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpiffyTests.release.xcconfig"; path = "Target Support Files/Pods-SpiffyTests/Pods-SpiffyTests.release.xcconfig"; sourceTree = "<group>"; };
+		FCF2515B130C84DA2A6F06E4 /* Pods_Spiffy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spiffy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9A099934A9564264B9810E /* Pods_Spiffy.framework in Frameworks */,
+				914D446A7622C8C8BCB8702D /* Pods_Spiffy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EFCA8C722607F5B00786F21 /* Spiffy.framework in Frameworks */,
-				12084CFE9DC0639FC821EA9A /* Pods_SpiffyTests.framework in Frameworks */,
+				5928EE96F73D597E033F5142 /* Pods_SpiffyTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,19 +115,19 @@
 		40F5D331353AB0EB1F1C79A0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0964BA3877328E1EE8C37461 /* Pods-Spiffy.debug.xcconfig */,
-				237486F1B42B429DF6984DCE /* Pods-Spiffy.release.xcconfig */,
-				D97BAC443FD2BB0511201F9D /* Pods-SpiffyTests.debug.xcconfig */,
-				5C44C5813439732802AE5A18 /* Pods-SpiffyTests.release.xcconfig */,
+				04AC89845CCD865EE26A6121 /* Pods-Spiffy.debug.xcconfig */,
+				15622D600C5DAD99E627CD2C /* Pods-Spiffy.release.xcconfig */,
+				CE493983639509D3B3A9CB70 /* Pods-SpiffyTests.debug.xcconfig */,
+				E52F7889A1CB1854AEEF38CB /* Pods-SpiffyTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		42439C21D4DBD0F29027EC4F /* Frameworks */ = {
+		4A59848F8AA6CA4C3612688B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92185F6C9FB51907637E2609 /* Pods_Spiffy.framework */,
-				382A6C3C3904D2BEF96F5EA9 /* Pods_SpiffyTests.framework */,
+				FCF2515B130C84DA2A6F06E4 /* Pods_Spiffy.framework */,
+				834C4D147CB828BFEF547152 /* Pods_SpiffyTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 				6EFCA8F5226092B200786F21 /* SpiffyShowcase */,
 				6EFCA8BE22607F5B00786F21 /* Products */,
 				40F5D331353AB0EB1F1C79A0 /* Pods */,
-				42439C21D4DBD0F29027EC4F /* Frameworks */,
+				4A59848F8AA6CA4C3612688B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,7 +235,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EFCA8D122607F5B00786F21 /* Build configuration list for PBXNativeTarget "Spiffy" */;
 			buildPhases = (
-				092AC88BCB96BFBF3FF9DBD3 /* [CP] Check Pods Manifest.lock */,
+				23087ABE9DE65EF4004ADD34 /* [CP] Check Pods Manifest.lock */,
 				6EFCA8B822607F5B00786F21 /* Headers */,
 				6EFCA8B922607F5B00786F21 /* Sources */,
 				6EFCA8BA22607F5B00786F21 /* Frameworks */,
@@ -254,11 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EFCA8D422607F5B00786F21 /* Build configuration list for PBXNativeTarget "SpiffyTests" */;
 			buildPhases = (
-				8901A9CBBA9298112F2DE6A6 /* [CP] Check Pods Manifest.lock */,
+				B36454437AE0218B4FDB9FED /* [CP] Check Pods Manifest.lock */,
 				6EFCA8C222607F5B00786F21 /* Sources */,
 				6EFCA8C322607F5B00786F21 /* Frameworks */,
 				6EFCA8C422607F5B00786F21 /* Resources */,
-				8A696EB9F892B706447314AB /* [CP] Embed Pods Frameworks */,
+				A3E92E005345B78B8F5BF2B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,7 +359,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		092AC88BCB96BFBF3FF9DBD3 /* [CP] Check Pods Manifest.lock */ = {
+		23087ABE9DE65EF4004ADD34 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -381,29 +381,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		8901A9CBBA9298112F2DE6A6 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SpiffyTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8A696EB9F892B706447314AB /* [CP] Embed Pods Frameworks */ = {
+		A3E92E005345B78B8F5BF2B0 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -425,6 +403,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SpiffyTests/Pods-SpiffyTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B36454437AE0218B4FDB9FED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpiffyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -622,7 +622,7 @@
 		};
 		6EFCA8D222607F5B00786F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0964BA3877328E1EE8C37461 /* Pods-Spiffy.debug.xcconfig */;
+			baseConfigurationReference = 04AC89845CCD865EE26A6121 /* Pods-Spiffy.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -649,7 +649,7 @@
 		};
 		6EFCA8D322607F5B00786F21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 237486F1B42B429DF6984DCE /* Pods-Spiffy.release.xcconfig */;
+			baseConfigurationReference = 15622D600C5DAD99E627CD2C /* Pods-Spiffy.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -675,7 +675,7 @@
 		};
 		6EFCA8D522607F5B00786F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D97BAC443FD2BB0511201F9D /* Pods-SpiffyTests.debug.xcconfig */;
+			baseConfigurationReference = CE493983639509D3B3A9CB70 /* Pods-SpiffyTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
@@ -697,7 +697,7 @@
 		};
 		6EFCA8D622607F5B00786F21 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5C44C5813439732802AE5A18 /* Pods-SpiffyTests.release.xcconfig */;
+			baseConfigurationReference = E52F7889A1CB1854AEEF38CB /* Pods-SpiffyTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
