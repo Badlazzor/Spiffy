@@ -1,0 +1,7 @@
+os: osx
+osx_image: xcode10.1
+language: swift
+xcode_project: Spiffy.xcodeproj
+xcode_scheme: SpiffyTests
+xcode_destination: platform=iOS Simulator,OS=12.1,name=iPhone XR
+podfile: Podfile
