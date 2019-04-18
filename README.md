@@ -15,10 +15,10 @@ import Spiffy
 import UIKit
 
 class ViewController: UIViewController {
-	@IBOutlet weak var button: UIButton!
-	@IBOutlet weak var label: UILabel!
-	
-	override func viewDidLoad() {
+    @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var label: UILabel!
+    
+    override func viewDidLoad() {
         super.viewDidLoad()
         
         button.styled(by: Styles.Showcase.Button.base)
