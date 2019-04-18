@@ -112,7 +112,7 @@ For a more detailed example see [the Showcase target's ViewController](https://g
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'Spiffy',    '~> 0.0.1'
+    pod 'Spiffy',    '~> 0.0.2'
 end
 ```
 
